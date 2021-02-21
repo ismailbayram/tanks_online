@@ -13,6 +13,10 @@ io.on("connection", (socket) => {
   let connection = server.onConnected(socket);
   connection.createEvents();
   connection.socket.emit("register", {"id": connection.player.id});
+
+  socket.on('ping', function() {
+    socket.emit('pong');
+  });
 });
 
 function interval(func, wait, times) {
