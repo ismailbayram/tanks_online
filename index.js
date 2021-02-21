@@ -1,3 +1,6 @@
+// ws://127.0.0.1:8000/socket.io/?EIO=3&transport=websocket
+// ws://iso-tanks-server.herokuapp.com:80/socket.io/?EIO=3&transport=websocket
+
 const io = require('socket.io')(process.env.PORT || 8000);
 const Server = require("./Classes/Server");
 
